@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 // expand around centre =   O(n^2) time and O(1) space
 
 class Solution
