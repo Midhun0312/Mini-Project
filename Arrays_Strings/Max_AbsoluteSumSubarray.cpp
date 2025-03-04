@@ -28,3 +28,43 @@ public:
         return maxi;
     }
 };
+
+
+// best greedy prefix sum solution
+
+class Solution
+{
+public:
+    int maxAbsoluteSum(vector<int> &nums)
+    {
+        int mini_pref = 0, max_pref = 0, pref_sum = 0;
+        for (int i = 0; i < nums.size(); ++i)
+        {
+            pref_sum += nums[i];
+            mini_pref = min(mini_pref, pref_sum);
+            max_pref = max(max_pref, pref_sum);
+        }
+
+        return max_pref - mini_pref;
+    }
+};
+
+
+
+// using kadanes algo
+
+int maxAbsoluteSum(vector<int> &nums)
+{
+    int max_ending_here = 0, min_ending_here = 0;
+    int max_sum = 0, min_sum = 0;
+
+    for (int num : nums)
+    {
+        max_ending_here = max(num, max_ending_here + num);
+        max_sum = max(max_sum, max_ending_here);   // max sum subarray
+
+        min_ending_here = min(num, min_ending_here + num);
+        min_sum = min(min_sum, min_ending_here);
+    }
+    return max(max_sum, abs(min_sum));
+}
