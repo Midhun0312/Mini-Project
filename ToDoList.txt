@@ -1,0 +1,10 @@
+NLP :
+Complete NLP Machine Learning In One Shot    https://www.youtube.com/watch?v=ENLEjGozrio&t=2750s
+Complete Transformers For NLP Deep Learning One Shot  https://www.youtube.com/watch?v=3bPhDUSAUYI&t=64s
+
+LLM :
+Create a Large Language Model from Scratch with Python  https://www.youtube.com/watch?v=UU1WVnMk4E8&t=221s
+
+
+React :
+React Login, Registration  Playlist    https://www.youtube.com/playlist?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd
