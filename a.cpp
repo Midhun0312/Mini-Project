@@ -14,6 +14,8 @@
 #include <cassert>
 #include <numeric>
 #include <cstddef> 
+#include <algorithm>
+#include <unordered_map>
 using namespace std;
  
 #define ll long long
@@ -22,47 +24,23 @@ using namespace std;
 #define f first
 #define s second
 #define pb push_back
+#define int long long
  
-
  
- 
-int main(){
-    #ifndef ONLINE_JUDGE
+int32_t main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+#ifndef ONLINE_JUDGE
         freopen("io/input.txt", "r", stdin);
         freopen("io/output.txt", "w", stdout);
         freopen("io/error.txt", "w", stderr);
     #endif
     
     int t; cin >> t;
-    while(t--) {
-        int n; cin >> n;
-        vector<int> v(n);
-        for(int i = 0; i<n; ++i) cin >> v[i];
-        sort(v.begin(), v.end());
-        vector<pair<int,int>> rep;
-        int flag = 1;
-        for(int i = 1; i<n; ++i){
-            if(v[i] == rep.back().first) rep.back().second++;
-            if(v[i] == v[i-1]) rep.pb({v[i], 0});
-        }
-        for(int i = 0; i<rep.size(); ++i) {
-            int a = rep[i].first;
-            int freq = rep[i].second;
-            if(freq == 4) {
-                cout << a << " " << a << " " << a <<  " " << a << endl;
-                flag = 0;
-                break;
-            }
-            for(int i = 0; i<n; ++i) {
-                if(freq > 2  && a == v[i]){
-                    if(upper_bound(v.begin() , v.end() , a) != v.end())
-                }
-            }
-        }
-        if(flag)
-        cout << -1 << endl;
+    while(t--){
+        
     }
-
-
+    
     return 0;
 }
