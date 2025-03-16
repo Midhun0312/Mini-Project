@@ -14,8 +14,6 @@
 #include <cassert>
 #include <numeric>
 #include <cstddef> 
-#include <algorithm>
-#include <unordered_map>
 using namespace std;
  
 #define ll long long
@@ -24,23 +22,32 @@ using namespace std;
 #define f first
 #define s second
 #define pb push_back
-#define int long long
  
+class B {
+public :
+    int x;
+    void print_x () {
+        cout << x << endl;
+    }
+}
  
-int32_t main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
-#ifndef ONLINE_JUDGE
+class D : public B {
+    public:
+        int y;
+        void print_y(){
+            cout << y << "\n";
+        }
+}
+
+ 
+int main(){
+    #ifndef ONLINE_JUDGE
         freopen("io/input.txt", "r", stdin);
         freopen("io/output.txt", "w", stdout);
         freopen("io/error.txt", "w", stderr);
     #endif
-    
-    int t; cin >> t;
-    while(t--){
-        
-    }
-    
-    return 0;
+
+        Person obj;
+
+        return 0;
 }
